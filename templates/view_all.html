@@ -1,0 +1,55 @@
+<!--<html>
+   <body>
+
+      <form name = "/showform/" method = "POST" >{% csrf_token %}
+
+         <div style = "max-width:470px;">
+            <center>
+               <input type = "text" style = "margin-left:20%;"
+               placeholder = "Name" name = "cname" />
+            </center>
+         </div>
+
+         <br>
+
+         <div style = "max-width:470px;">
+            <center>
+               <input type = "Text" style = "margin-left:20%;"
+                  placeholder = "email" name = "email" />
+            </center>
+         </div>
+
+         <br>
+         <div style = "max-width:470px;">
+            <center>
+               <input type = "Text" style = "margin-left:20%;"
+                  placeholder = "phone" name = "phone" />
+            </center>
+         </div>
+
+         <br>
+         <div style = "max-width:470px;">
+            <center>
+               <input type = "text" style = "margin-left:20%;"
+                  placeholder = "requirements" name = "requirements" />
+            </center>
+         </div>
+
+         <br>
+
+         <div style = "max-width:470px;">
+            <center>
+
+               <button style = "border:0px;background-color:#4285F4; margin-top:8%;
+                  height:35px; width:80%; margin-left:19%;" type = "submit" >submit
+
+               </button>
+
+            </center>
+-->
+<form action='/showform/' method='post'>
+  {% csrf_token %}
+  {{form.as_p}}
+  {{form.help_text}}
+<input type='submit' value='submit'>
+</form>

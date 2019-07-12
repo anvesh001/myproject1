@@ -47,7 +47,7 @@
 
             </center>
 -->
-<form action='/showform/' method='post'>
+<form action="{% url 'showform' %}" method='post'>
   {% csrf_token %}
   {{form.as_p}}
   {{form.help_text}}

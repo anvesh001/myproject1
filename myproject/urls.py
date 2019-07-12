@@ -19,6 +19,8 @@ from django.contrib import admin
 from django.urls import path
 from portfolio.views import HomePageView
 from portfolio import views
+from django.conf.urls import include, url
+'''
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path('/home/',views.index),
@@ -26,5 +28,15 @@ urlpatterns = [
     path('index/',HomePageView.as_view()),
     path('showform/',views.showform, name='showform'),
 ]
+'''
+urlpatterns = [
+    url(r'^admin/$', admin.site.urls),
+    #path('/home/',views.index),
+    url(r'^home/$',views.home, name='home'),
+    url(r'index/$',HomePageView.as_view()),
+    url(r'showform/$',views.showform, name='showform'),
+    url(r'^index/(?P<page>[a-z0-9]+)/$',HomePageView.as_view()),
+]
+
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

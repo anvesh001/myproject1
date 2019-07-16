@@ -1,0 +1,734 @@
+{% load static %}
+
+
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <title>Hiree</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="{% static 'favicon.ico' %}">
+
+        <!--Google Font link-->
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+
+        <link rel="stylesheet" href="{% static 'assets/css/slick/slick.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/slick/slick-theme.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/iconfont.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/bootsnav.css' %}">
+
+        <!-- xsslider slider css -->
+
+
+        <!--<link rel="stylesheet" href="assets/css/xsslider.css">-->
+
+
+
+
+        <!--For Plugins external css-->
+        <!--<link rel="stylesheet" href="assets/css/plugins.css" />-->
+
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+        <!--<link rel="stylesheet" href="assets/css/colors/maron.css">-->
+
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="{% static 'assets/css/responsive.css' %}" />
+
+        <script src="{% static 'assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' %}"></script>
+
+		 <script src="{% static 'script.js' %}"></script>
+		<style>
+
+/*Contact sectiom*/
+.content-header{
+  font-family: 'Oleo Script', cursive;
+  color:#00a885;
+  font-size: 45px;
+}
+
+.section-content{
+  text-align: center;
+
+}
+#contact{
+
+    font-family: 'Teko', sans-serif;
+  padding-top: 60px;
+  width: 100%;
+  width: 100vw;
+  height: 550px;
+  background: #3a6186; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #3a6186 , #89253e); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #3a6186 , #89253e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color : #fff;
+}
+.contact-section{
+  padding-top: 40px;
+}
+.contact-section .col-md-6{
+  width: 50%;
+}
+
+.form-line{
+  border-right: 1px solid #B29999;
+}
+
+.form-group{
+  margin-top: 10px;
+}
+label{
+  font-size: 1.3em;
+  line-height: 1em;
+  font-weight: normal;
+}
+.form-control{
+  font-size: 1.3em;
+  color: #080808;
+}
+textarea.form-control {
+    height: 135px;
+   /* margin-top: px;*/
+}
+
+.submit{
+  font-size: 1.1em;
+  float: right;
+  width: 180px;
+  background-color: transparent;
+  color: #fff;
+
+}
+
+#about{
+font-family: 'Teko', sans-serif;
+  padding-top: 40px;
+  width: 100%;
+  width: 100vw;
+
+  background: #3a6186; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #3a6186 , #89253e); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #3a6186 , #89253e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color : #fff;
+ height: 150px;
+
+	}
+
+
+section {
+	padding: 75px 0px;
+}
+
+.section-title {
+	margin-bottom: 50px;
+}
+
+.section-title h2 span {
+    font-size: 20px;
+}
+
+.section-heading-btn {
+    position: absolute;
+    right: 15px;
+    top: 19px;
+}
+
+
+.btn-red-border {
+	border: 1px solid #db5252;
+	color: #db5252;
+	transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+}
+
+.btn {
+	background-color: transparent;
+	border: 1px solid #000;
+	border-radius: 0px;
+	color: #000;
+	padding: 5px 20px;
+	letter-spacing: 1px;
+	font-size: 14px;
+	text-transform: uppercase;
+	transition: all 0.4s ease-in-out;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-ms-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+}
+
+.btn-black-border:hover {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+.element-item figure {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 30px;
+	text-align: center;
+	cursor: pointer;
+}
+.element-item figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 1;
+	transform: scale(1.15);
+	-webkit-transform: scale(1.15);
+	-moz-transform: scale(1.15);
+	-ms-transform: scale(1.15);
+	-o-transform: scale(1.15);
+	transition: opacity 0.4s, transform 0.4s;
+	-webkit-transition: opacity 0.4s, transform 0.4s;
+	-moz-transition: opacity 0.4s, transform 0.4s;
+	-ms-transition: opacity 0.4s, transform 0.4s;
+	-o-transition: opacity 0.4s, transform 0.4s;
+}
+
+figure.effect-zoe figcaption {
+	top: auto;
+	bottom: 0;
+	padding: 1em;
+	height: 3.25em;
+	background: #DB5252;
+	color: #ffffff;
+	-webkit-transition: -webkit-transform 0.4s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+}
+.element-item figure figcaption,
+.element-item figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.element-item figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+figure.effect-zoe h2 {
+	display: inline-block;
+	font-size: 18px;
+	letter-spacing: 1px;
+	margin-top: 7px;
+}
+
+figure.effect-zoe h2,
+figure.effect-zoe p.icon-links a {
+	-webkit-transition: -webkit-transform 0.4s;
+	transition: transform 0.4s;
+	-webkit-transform: translate3d(0,200%,0);
+	transform: translate3d(0,200%,0);
+}
+figure.effect-zoe h2 {
+	float: left;
+}
+.element-item figure h2,
+.element-item figure p {
+	margin: 0;
+}
+.element-item figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+		</style>
+
+
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar-collapse">
+
+
+        <!-- Preloader -->
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                </div>
+            </div>
+        </div><!--End off Preloader -->
+
+
+        <div class="culmn">
+            <!--Home page style-->
+
+
+            <nav class="navbar navbar-default bootsnav navbar-fixed">
+                <div class="navbar-top bg-grey fix">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="navbar-callus text-left sm-text-center">
+                                    <ul class="list-inline">
+                                        <li><a href=""><i class="fa fa-phone"></i> Call us: 1234 5678 90</a></li>
+                                        <li><a href=""><i class="fa fa-envelope-o"></i> Contact us: your@email.com</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="navbar-socail text-right sm-text-center">
+                                    <ul class="list-inline">
+                                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href=""><i class="fa fa-behance"></i></a></li>
+                                        <li><a href=""><i class="fa fa-dribbble"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Start Top Search -->
+                <div class="top-search">
+                    <div class="container">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-addon close-search"><i class="fa fa-times"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Top Search -->
+
+
+                <div class="container">
+                    <div class="attr-nav">
+                        <ul>
+                            <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Start Header Navigation -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="#brand">
+                            <img src="{% static 'assets/images/logo.png' %}" class="logo" alt="Hiree">
+                            <!--<img src="assets/images/footer-logo.png" class="logo logo-scrolled" alt="">-->
+                        </a>
+
+                    </div>
+                    <!-- End Header Navigation -->
+
+                    <!-- navbar menu -->
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#features">About Us</a></li>
+                            <li><a href="#business">Our Services</a></li>
+                            <li><a href="#work">Portfolio</a></li>
+                            <li><a href="#test">Blog</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div>
+
+            </nav>
+
+
+
+            <!--Home Sections-->
+
+            <section id="about" class="home bg-black fix">
+			<div class="section-content">
+
+
+
+
+
+                    </div><!--End off row-->
+
+            </section> <!--End off Home Sections-->
+
+<section id="about">
+			<div class="section-content">
+				<h1 class="section-header">Get in <span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> Touch with us</span></h1>
+			<!--	<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>-->
+			</div>
+			</section>
+
+            <!--Featured Section-->
+            <section id="features" class="features">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_features fix roomy-70">
+                            <div class="col-md-4">
+                                <div class="features_item sm-m-top-30">
+                                    <div class="f_item_icon">
+                                        <i class="fa fa-thumbs-o-up"></i>
+                                    </div>
+                                    <div class="f_item_text">
+                                        <h3>Best Quality Design</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
+                                            in sit amet mattis volutpat rhoncus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="features_item sm-m-top-30">
+                                    <div class="f_item_icon">
+                                        <i class="fa fa-tablet"></i>
+                                    </div>
+                                    <div class="f_item_text">
+                                        <h3>Responsive Design</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
+                                            in sit amet mattis volutpat rhoncus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="features_item sm-m-top-30">
+                                    <div class="f_item_icon">
+                                        <i class="fa fa-sliders"></i>
+                                    </div>
+                                    <div class="f_item_text">
+                                        <h3>Easy to Customize</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque eleifend
+                                            in sit amet mattis volutpat rhoncus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- End off row -->
+                </div><!-- End off container -->
+            </section><!-- End off Featured Section-->
+
+
+
+
+<section id="contact">
+			<div class="section-content">
+				<h1 class="section-header">Enquiry<span class="content-header wow fadeIn " data-wow-delay="0.2s" data-wow-duration="2s"> </span></h1>
+			<!--	<h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h3>-->
+			</div>
+			<div class="contact-section">
+			<div class="container">
+				<form class="contact_form" action="{% url 'contact1' %}" method = 'POST'>
+          {% csrf_token %}
+					<div class="col-md-6 form-line">
+			  			<div class="form-group">
+			  				<label for="exampleInputUsername">Your Name</label>
+					    	<input type="text" class="form-control" name="name" id="name" required="" placeholder=" Enter Name">
+				  		</div>
+				  		<div class="form-group">
+					    	<label for="exampleInputEmail">Email Address</label>
+					    	<input type="email" class="form-control" name="email" id="email" required="" placeholder=" Enter Email id">
+					  	</div>
+					  	<div class="form-group">
+					    	<label for="telephone">Mobile No.</label>
+					    	<input type="text" class="form-control" id="phone" name="phone" required="" placeholder=" Enter 10-digit mobile no.">
+			  			</div>
+			  		</div>
+			  		<div class="col-md-6">
+			  			<div class="form-group">
+			  				<label for ="description"> Message</label>
+			  			 	<textarea class="form-control" rows="4" name="message" id="message" required="" placeholder="Enter Your Message"></textarea>
+			  			</div>
+			  			<div>
+                <input href="{% url 'contact1' %}" name="submit" type="submit" class="btn btn-primary btn-circled" value="Send Message">
+			  		<!--		<button type="button" name="submit" type="submit" class="btn btn-default submit" value="Send Message"><a href="/home/">  Send Message</a></button>
+			  		-->	</div>
+
+					</div>
+				</form>
+			</div>
+		</section>
+
+
+		<!-- start: portfolio section-->
+            <section id="portfolio" class="dark-gray-bg">
+                <div class="container">
+
+                    <div class="row portfolio-filter">
+                        <div class="col-md-12 filter-button-group" id="filters">
+                            <div class="section-title">
+                                <h2 align="center">Contact Us <span>||| Check your enquiries here</span></h2>
+                            </div> <!-- /.section-title -->
+                          <!--  <button type="button" class="btn btn-default btn-red-border section-heading-btn" data-filter="*">view all</button>
+                            <button type="button" class="btn btn-default" data-filter=".web">WEB</button>
+                            <button type="button" class="btn btn-default" data-filter=".app">APP</button>
+                            <button type="button" class="btn btn-default" data-filter=".design">DESIGN</button>
+                            <button type="button" class="btn btn-default" data-filter=".seo">SEO</button>
+                        </div>
+                    </div>  <!-- row -->
+
+                    <div class="row">
+                        <div id="portfolioItems">
+
+                            <div class="col-md-6 col-sm-6 col-xs-12 element-item web all" data-category="web all">
+
+                                 <ul>
+						<!--	<li>
+								<i class="fa fa-phone" aria-hidden="true"></i>
+								<p><span>tel</span><br>+91 984 511 4655 <br>+91 733 837 8636</p>
+							</li>-->
+							<li>
+							 <img src="{% static 'assets/images/email.png' %}" alt="" height="42" width="42"><br><br><h4>- contact@incruiter.com</h4><br>
+
+							</li>
+							<li>
+							<img src="{% static 'assets/images/address.png' %}" alt="" height="42" width="42"><br><br><h4>- 3rd Floor, Scorpio house, Lakshmi Layout, Gandhi Nagar, Marathahalli, Bengaluru, Karnataka 560037</h4>
+
+
+							</li>
+						</ul>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-12 element-item app all" data-category="app all">
+                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.2441676465573!2d77.70519581397105!3d12.956221768723129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae131747ca721b%3A0xaec05bf5f795111d!2sThe+Interviewer!5e0!3m2!1sen!2sin!4v1562587647132!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+                            </div>
+
+
+                    </div>  <!-- row -->
+                </div>
+            </section> <!-- /#portfolio -->
+            <!-- end: portfolio section-->
+
+            <!--Brand Section
+            <section id="brand" class="brand fix roomy-80">
+                <div class="container">
+                    <div class="row">
+                        <div class="main_brand text-center">
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="brand_item sm-m-top-20">
+                                    <img src="assets/images/cbrand-img1.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="brand_item sm-m-top-20">
+                                    <img src="assets/images/cbrand-img2.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="brand_item sm-m-top-20">
+                                    <img src="assets/images/cbrand-img3.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="brand_item sm-m-top-20">
+                                    <img src="assets/images/cbrand-img4.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="brand_item sm-m-top-20">
+                                    <img src="assets/images/cbrand-img5.png" alt="" />
+                                </div>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-6">
+                                <div class="brand_item sm-m-top-20">
+                                    <img src="assets/images/cbrand-img6.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- End off Brand section -->
+
+
+            <!--Call to  action section-->
+            <section id="action" class="action bg-primary roomy-40">
+                <div class="container">
+                    <div class="row">
+                        <div class="maine_action">
+                            <div class="col-md-8">
+                                <div class="action_item text-center">
+                                    <h2 class="text-white text-uppercase">Your Promotion Text Will Be Here</h2>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="action_btn text-left sm-text-center">
+                                    <a href="" class="btn btn-default">Purchase Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <footer id="contact" class="footer action-lage bg-black p-top-80">
+                <!--<div class="action-lage"></div>-->
+                <div class="container">
+                    <div class="row">
+                        <div class="widget_area">
+                            <div class="col-md-3">
+                                <div class="widget_item widget_about">
+                                    <h5 class="text-white">About Us</h5>
+                                    <p class="m-top-20">Lorem ipsum dolor sit amet consec tetur adipiscing elit
+                                        nulla aliquet pretium nisi in cursus
+                                        maecenas nec eleifen.</p>
+                                    <div class="widget_ab_item m-top-30">
+                                        <div class="item_icon"><i class="fa fa-location-arrow"></i></div>
+                                        <div class="widget_ab_item_text">
+                                            <h6 class="text-white">Location</h6>
+                                            <p>
+                                                123 suscipit ipsum nam auctor
+                                                mauris dui, ac sollicitudin mauris,
+                                                Bandung</p>
+                                        </div>
+                                    </div>
+                                    <div class="widget_ab_item m-top-30">
+                                        <div class="item_icon"><i class="fa fa-phone"></i></div>
+                                        <div class="widget_ab_item_text">
+                                            <h6 class="text-white">Phone :</h6>
+                                            <p>+1 2345 6789</p>
+                                        </div>
+                                    </div>
+                                    <div class="widget_ab_item m-top-30">
+                                        <div class="item_icon"><i class="fa fa-envelope-o"></i></div>
+                                        <div class="widget_ab_item_text">
+                                            <h6 class="text-white">Email Address :</h6>
+                                            <p>youremail@mail.com</p>
+                                        </div>
+                                    </div>
+                                </div><!-- End off widget item -->
+                            </div><!-- End off col-md-3 -->
+
+                            <div class="col-md-3">
+                                <div class="widget_item widget_latest sm-m-top-50">
+                                    <h5 class="text-white">Latest News</h5>
+                                    <div class="widget_latst_item m-top-30">
+                                        <div class="item_icon"><img src="{% static 'assets/images/ltst-img-1.jpg' %}" alt="" /></div>
+                                        <div class="widget_latst_item_text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                            <a href="">21<sup>th</sup> July 2016</a>
+                                        </div>
+                                    </div>
+                                    <div class="widget_latst_item m-top-30">
+                                        <div class="item_icon"><img src="{% static 'assets/images/ltst-img-2.jpg' %}" alt="" /></div>
+                                        <div class="widget_latst_item_text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                            <a href="">21<sup>th</sup> July 2016</a>
+                                        </div>
+                                    </div>
+                                    <div class="widget_latst_item m-top-30">
+                                        <div class="item_icon"><img src="{% static 'assets/images/ltst-img-3.jpg' %}" alt="" /></div>
+                                        <div class="widget_latst_item_text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                            <a href="">21<sup>th</sup> July 2016</a>
+                                        </div>
+                                    </div>
+                                </div><!-- End off widget item -->
+                            </div><!-- End off col-md-3 -->
+
+                            <div class="col-md-3">
+                                <div class="widget_item widget_service sm-m-top-50">
+                                    <h5 class="text-white">Latest News</h5>
+                                    <ul class="m-top-20">
+                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> Web Design</a></li>
+                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> User Interface Design</a></li>
+                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> E- Commerce</a></li>
+                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> Web Hosting</a></li>
+                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> Themes</a></li>
+                                        <li class="m-top-20"><a href=""><i class="fa fa-angle-right"></i> Support Forums</a></li>
+                                    </ul>
+                                </div><!-- End off widget item -->
+                            </div><!-- End off col-md-3 -->
+
+                            <div class="col-md-3">
+                                <div class="widget_item widget_newsletter sm-m-top-50">
+                                    <h5 class="text-white">Newsletter</h5>
+                                    <form class="form-inline m-top-30">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" placeholder="Enter you Email">
+                                            <button type="submit" class="btn text-center"><i class="fa fa-arrow-right"></i></button>
+                                        </div>
+
+                                    </form>
+                                    <div class="widget_brand m-top-40">
+                                        <a href="" class="text-uppercase">Your Logo</a>
+                                        <p>Lorem ipsum dolor sit amet consec tetur
+                                            adipiscing elit nulla aliquet pretium nisi in</p>
+                                    </div>
+                                    <ul class="list-inline m-top-20">
+                                        <li>-  <a href=""><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href=""><i class="fa fa-behance"></i></a></li>
+                                        <li><a href=""><i class="fa fa-dribbble"></i></a>  - </li>
+                                    </ul>
+
+                                </div><!-- End off widget item -->
+                            </div><!-- End off col-md-3 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="main_footer fix bg-mega text-center p-top-40 p-bottom-30 m-top-80">
+                    <div class="col-md-12">
+                        <p class="wow fadeInRight" data-wow-duration="1s">
+                            Made with
+                            <i class="fa fa-heart"></i>
+                            by
+                            <a target="_blank" href="">TheleftBrain Co</a>
+                            2019. All Rights Reserved
+                        </p>
+                    </div>
+                </div>
+            </footer>
+
+
+
+
+        </div>
+
+        <!-- JS includes -->
+		<script type="text/javascript" src="{% static 'jquery-2.1.3.min.js' %}"></script>
+
+        <script type="text/javascript" src="{% static 'isotope.pkgd.min.js' %}"></script>
+
+        <script type="text/javascript" src="{% static 'owl.carousel.js' %}"></script>
+
+        <script type="text/javascript" src="{% static 'script.js' %}"></script>
+
+        <script src="{% static 'assets/js/vendor/jquery-1.11.2.min.js' %}"></script>
+        <script src="{% static 'assets/js/vendor/bootstrap.min.js' %}"></script>
+
+        <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.magnific-popup.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.easing.1.3.js' %}"></script>
+        <script src="{% static 'assets/css/slick/slick.js' %}"></script>
+        <script src="{% static 'assets/css/slick/slick.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.collapse.js' %}"></script>
+        <script src="{% static 'assets/js/bootsnav.js' %}"></script>
+
+
+
+        <script src="{% static 'assets/js/plugins.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+
+
+    </body>
+</html>

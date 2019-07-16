@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<ul class="circle--inline">
+
+  {% if user.is_authenticated %}
+      <li><a href="{% url 'accounts:home' %}">Home</a></li>
+      <li><a href="{% url 'accounts:profile' %}">Profile</a></li>
+  {% endif %}
+</ul>
+
+<div class="circle--fluid--cell circle--fluid--secondary">
+  <nav>
+    <ul class="circle--inline">
+      {% if not user.is_authenticated %}
+      <li><a href="{% url 'accounts:sign_up' %}">Register</a></li>
+      <li><a href="{% url 'accounts:sign_in' %}">Login</a></li>
+        {% else %}
+        <!-- view profile link here? -->
+        <!-- edit profile link here? -->
+        <li><a href="{% url 'accounts:sign_out' %}">Sign Out</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>
+</div>
+</div>
+</header>
+
+<div class="bounds circle--page">
+  {% if messages %}
+  <ul class="messages centered grid-50">
+    {% for message in messages %}
+    <li{% if message.tags %}
+    class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  {% block body %}{% endblock %}
+</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block body %}
+  {% if user.is_authenticated %}
+    <div class="grid-25">
+        <ul class="left-nav">
+            <li><a href="#">Current Project</a></li>
+            <li><a href="#">Past Project</a></li>
+            <li><a href="#">Update Project</a></li>
+
+        </ul>
+    </div>
+    {% endif %}
+    <div class="{% if user.is_authenticated %}grid-75{% else %}grid-100{% endif %}">
+        {% if user.is_authenticated %}
+            {% if profile.first_name %}
+              <h1>Welcome {{ profile.first_name }}!</h1>
+            {% endif %}
+            <p>hai This your page</p>
+            <p>User Name:{{ user.username }}</p>
+            <p>User Id:{{ user.id }}</p>
+
+            <a href="{% url 'accounts:profile' %}">My Profile</a>
+
+        {% else %}
+            <h1>Welcome!</h1>
+            <p>Register or login to start the fun!</p>
+            <a href="{% url 'accounts:sign_in' %}">Sign In</a>
+            <a href="{% url 'accounts:sign_up' %}">Sign Up</a>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,8 @@
+
+
+<form action="{% url 'showform' %}" method='post'>
+  {% csrf_token %}
+  {{form.as_p}}
+  {{form.help_text}}
+<input type='submit' value='submit'>
+</form>
